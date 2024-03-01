@@ -9,6 +9,7 @@ private:
 	int ones_digit;
 	int tenths_digit;
 	int hundreths_digit;
+	int overflow;
 
 public:
 	GroceryCounter();	//Default Constructor
@@ -18,8 +19,8 @@ public:
 	void tenths();	//Adds 1 in the tenths place, $00.10
 	void hundreths();	//Adds 1 in the hundreths place, $00.01
 
-	std::string total();	//Returns the counter amount in money notation, "$10.00"
-	int number_of_overflows();	//Counts number of times the user overflowed the counter
+	string total();	//Returns the counter amount in money notation, "$10.00"
+	int number_of_overflows();	//Counts number of times the user overflowed the counter, and wraps around overflowed numbers
 
 	void clear();	//Sets everything back to 0
 };

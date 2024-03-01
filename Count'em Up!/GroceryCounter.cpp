@@ -1,10 +1,13 @@
 #include "GroceryCounter.h"
+#include <string>
+using namespace std;
 
 GroceryCounter::GroceryCounter() {
 	tens_digit = 0;
 	ones_digit = 0;
 	tenths_digit = 0;
 	hundreths_digit = 0;
+	overflow = 0;
 }
 
 void GroceryCounter::tens() {
@@ -43,4 +46,25 @@ void GroceryCounter::hundreths() {
 	else {
 		hundreths_digit++;
 	}
+}
+
+string GroceryCounter::total(){
+	string temp = "$";
+	temp += tens_digit + ones_digit;
+	temp += ".";
+	temp += tenths_digit + hundreths_digit;
+	return temp;
+}
+
+int GroceryCounter::number_of_overflows() {
+	overflow++;
+	hundreths();
+}
+
+void GroceryCounter::clear() {
+	tens_digit = 0;
+	ones_digit = 0;
+	tenths_digit = 0;
+	hundreths_digit = 0;
+	overflow = 0;
 }
