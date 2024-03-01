@@ -18,5 +18,13 @@
     <ClCompile Include="Count%27em Up!.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="GroceryCounter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GroceryCounter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
