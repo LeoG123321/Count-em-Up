@@ -50,6 +50,12 @@ int main()
     assert(counter.total() == "$00.00");
     assert(counter.number_of_overflows() == 0);
 
+    cout << "\tTesting Custom Constructor..." << endl;
+    GroceryCounter custom_counter(5, 6, 7, 8);
+    assert(custom_counter.total() == "$56.78");
+    GroceryCounter custom_counter2(12, 32, 41, 6);
+    assert(custom_counter2.total() == "$00.00");
+
     cout << "Testing Complete." << endl;
     return 0;
 }
