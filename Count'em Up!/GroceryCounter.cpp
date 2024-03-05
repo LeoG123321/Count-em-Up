@@ -11,10 +11,11 @@ GroceryCounter::GroceryCounter() {
 }
 
 void GroceryCounter::tens() {
-	//counts up by 1 in the tens digit, if it goes above 9, set to zero and count up by 1 in the overflow counter
+	//counts up by 1 in the tens digit, if it goes above 9, set to zero and count up by 1 in the overflow counter & in the hundreths counter
 	if (tens_digit == 9) {
 		tens_digit = 0;
-		number_of_overflows();
+		overflow++;
+		hundreths();
 	}
 	else {
 		tens_digit++;
@@ -61,9 +62,7 @@ string GroceryCounter::total(){
 }
 
 int GroceryCounter::number_of_overflows() {
-	//counts up by 1 in the overflow counter and counts up 1 in the hundreths digit
-	overflow++;
-	hundreths();
+	return overflow;
 }
 
 void GroceryCounter::clear() {
