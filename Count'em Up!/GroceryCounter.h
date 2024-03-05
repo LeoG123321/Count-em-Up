@@ -12,6 +12,7 @@ private:
 	int overflow;
 
 public:
+	GroceryCounter(int, int, int, int, int); //Custom Counter Cunstructor, input decides maximum size, defaults if input > maximum size inputed
 	GroceryCounter(int, int, int, int); //Custom Contructor, goes to default if input > 9999
 	GroceryCounter();	//Default Constructor
 
