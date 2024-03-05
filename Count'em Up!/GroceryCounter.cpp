@@ -2,14 +2,18 @@
 #include <string>
 using namespace std;
 
-GroceryCounter::GroceryCounter(int max, int tens, int ones, int tenths, int hundreths){
+GroceryCounter::GroceryCounter(int max, int input){
 	tens_digit = 0;
 	ones_digit = 0;
 	tenths_digit = 0;
 	hundreths_digit = 0;
 	overflow = 0;
 	
-	if (hundreths + tenths * 10 + ones * 100 + tens * 1000 < 10000) {
+	if (input < 10000) {
+		int hundreths = input - (input % 10);
+		int tenths = (input % 10) - (input % 100);
+		int ones = (input % 100) - (input % 1000);
+		int tens = input % 1000;
 		for (int i = 0; i != tens; i++)
 			this->tens();
 		for (int i = 0; i != ones; i++)
@@ -19,6 +23,9 @@ GroceryCounter::GroceryCounter(int max, int tens, int ones, int tenths, int hund
 		for (int i = 0; i != hundreths; i++)
 			this->hundreths();
 	}
+	//max_tens = max - (max % )
+	//max_ones
+
 }
 
 GroceryCounter::GroceryCounter(int input) {
