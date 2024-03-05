@@ -2,6 +2,23 @@
 #include <string>
 using namespace std;
 
+GroceryCounter::GroceryCounter(int max, int tens, int ones, int tenths, int hundreths) {
+	if (hundreths + tenths * 10 + ones * 100 + tens * 1000 > max) {
+		tens_digit = 0;
+		ones_digit = 0;
+		tenths_digit = 0;
+		hundreths_digit = 0;
+		overflow = 0;
+	}
+	else {
+		tens_digit = tens;
+		ones_digit = ones;
+		tenths_digit = tenths;
+		hundreths_digit = hundreths;
+		overflow = 0;
+	}
+}
+
 GroceryCounter::GroceryCounter(int tens, int ones, int tenths, int hundreths) {
 	if (hundreths + tenths * 10 + ones * 100 + tens * 1000 > 9999) {
 		tens_digit = 0;
