@@ -11,11 +11,20 @@ GroceryCounter::GroceryCounter(int tens, int ones, int tenths, int hundreths) {
 		overflow = 0;
 	}
 	else {
-		tens_digit = tens;
-		ones_digit = ones;
-		tenths_digit = tenths;
-		hundreths_digit = hundreths;
+		tens_digit = 0;
+		ones_digit = 0;
+		tenths_digit = 0;
+		hundreths_digit = 0;
 		overflow = 0;
+
+		for (int i = 0; i != tens; i++)
+			this->tens();
+		for (int i = 0; i != ones; i++)
+			this->ones();
+		for (int i = 0; i != tenths; i++)
+			this->tenths();
+		for (int i = 0; i != hundreths; i++)
+			this->hundreths();
 	}
 }
 

@@ -55,6 +55,8 @@ int main()
     assert(custom_counter.total() == "$56.78");
     GroceryCounter custom_counter2(12, 32, 41, 6);
     assert(custom_counter2.total() == "$00.00");
+    GroceryCounter custom_counter3(3, 13, 7, 24);
+    assert(custom_counter3.total() == "$43.94");
 
     cout << "Testing Complete." << endl;
     return 0;
