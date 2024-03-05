@@ -48,7 +48,7 @@ int main()
     cout << "\tTesting Clearing..." << endl;
     counter.clear();
     assert(counter.total() == "$00.00");
-    assert(counter.number_of_overflows() == 1);
+    assert(counter.number_of_overflows() == 0);
 
     cout << "Testing Complete." << endl;
     return 0;

@@ -53,11 +53,13 @@ void GroceryCounter::hundreths() {
 	}
 }
 
-string GroceryCounter::total(){
+string GroceryCounter::total(){	//Prints out numbers using ASCII 
 	string temp = "$";
-	temp += tens_digit + ones_digit;
+	temp += 48 + tens_digit;
+	temp += 48 + ones_digit;
 	temp += ".";
-	temp += tenths_digit + hundreths_digit;
+	temp += 48 + tenths_digit;
+	temp += 48 + hundreths_digit;
 	return temp;
 }
 
