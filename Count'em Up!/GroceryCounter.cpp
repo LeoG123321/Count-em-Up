@@ -1,5 +1,6 @@
 #include "GroceryCounter.h"
 #include <string>
+#include <iostream>
 using namespace std;
 
 GroceryCounter::GroceryCounter(int max, int tens, int ones, int tenths, int hundreths){
@@ -29,10 +30,14 @@ GroceryCounter::GroceryCounter(int input) {
 	overflow = 0;
 
 	if (input < 10000) {
-		int hundreths = input - (input % 10);
-		int tenths = (input % 10) - (input % 100);
-		int ones = (input % 100) - (input % 1000);
-		int tens = input % 1000;
+		int hundreths = input % 10;
+		cout << hundreths << endl;
+		int tenths = ((input % 100) - (input % 10)) / 10;
+		cout << tenths << endl;
+		int ones = ((input % 1000) - (input % 100)) / 100;
+		cout << ones << endl;
+		int tens = (input - (input % 1000)) / 1000;
+
 		for (int i = 0; i != tens; i++)
 			this->tens();
 		for (int i = 0; i != ones; i++)
