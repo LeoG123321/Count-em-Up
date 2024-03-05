@@ -10,13 +10,8 @@ private:
 	int tenths_digit;
 	int hundreths_digit;
 	int overflow;
-	int max_tens;
-	int max_ones;
-	int max_tenths;
-	int max_hundreths;
 
 public:
-	GroceryCounter(int, int, int, int, int); //Custom Counter Cunstructor, input decides maximum size, defaults if input > maximum size inputed
 	GroceryCounter(int); //Custom Contructor, goes to default if input > 9999
 	GroceryCounter();	//Default Constructor
 
