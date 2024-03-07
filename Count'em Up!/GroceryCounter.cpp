@@ -23,9 +23,7 @@ GroceryCounter::GroceryCounter(int max, int input){
 		for (int i = 0; i != hundreths; i++)
 			this->hundreths();
 	}
-	//max_tens = max - (max % )
-	//max_ones
-
+	this->max = max;
 }
 
 GroceryCounter::GroceryCounter(int input) {
@@ -34,6 +32,7 @@ GroceryCounter::GroceryCounter(int input) {
 	tenths_digit = 0;
 	hundreths_digit = 0;
 	overflow = 0;
+	max = 9999;
 
 	if (input < 10000) {
 		int hundreths = input % 10;
@@ -57,6 +56,7 @@ GroceryCounter::GroceryCounter() {
 	tenths_digit = 0;
 	hundreths_digit = 0;
 	overflow = 0;
+	max = 9999;
 }
 
 void GroceryCounter::tens() {
