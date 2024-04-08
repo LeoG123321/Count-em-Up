@@ -20,22 +20,22 @@ int main()
     assert(counter.total() == "$00.00");
     
     cout << "\tTesting Counters..." << endl;
-    for (int i = 0; i != 12; i++) {
+    for (int i = 0; i < 12; i++) {
         counter.hundreths();
     }
     assert(counter.total() == "$00.12");
 
-    for (int i = 0; i != 10; i++) {
+    for (int i = 0; i < 10; i++) {
         counter.tenths();
     }
     assert(counter.total() == "$01.12");
 
-    for (int i = 0; i != 14; i++) {
+    for (int i = 0; i < 14; i++) {
         counter.ones();
     }
     assert(counter.total() == "$15.12");
 
-    for (int i = 0; i != 8; i++) {
+    for (int i = 0; i < 8; i++) {
         counter.tens();
     }
     assert(counter.total() == "$95.12");

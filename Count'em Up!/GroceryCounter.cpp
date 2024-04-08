@@ -16,13 +16,13 @@ GroceryCounter::GroceryCounter(int input) {
 		int ones = ((input % 1000) - (input % 100)) / 100;
 		int tens = (input - (input % 1000)) / 1000;
 
-		for (int i = 0; i != tens; i++)
+		for (int i = 0; i < tens; i++)
 			this->tens();
-		for (int i = 0; i != ones; i++)
+		for (int i = 0; i < ones; i++)
 			this->ones();
-		for (int i = 0; i != tenths; i++)
+		for (int i = 0; i < tenths; i++)
 			this->tenths();
-		for (int i = 0; i != hundreths; i++)
+		for (int i = 0; i < hundreths; i++)
 			this->hundreths();
 	}
 }
