@@ -12,6 +12,7 @@ private:
 	int overflow;
 
 public:
+	GroceryCounter(int); //Custom Contructor, goes to default if input > 9999
 	GroceryCounter();	//Default Constructor
 
 	void tens();	//Adds 1 in the tens place, $10.00
